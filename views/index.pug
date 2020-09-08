@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    main.inner.cover(role='main')
+      h1.cover-heading Make some magic. <br> Make a poem.
+      form(method='POST' action='')
+        div.form-group
+          label(for='path')
+          input#path.form-control(  type='text' placeholder='Paste a URL to poeticize' name='path' 
+                                    required='true' value=(undefined===oldPath ? '' : oldPath) )
+        .form-group
+          .form-check.form-check-inline
+              input.form-check-input(type='radio', name='type', id='haiku', value='haiku', checked=true)
+              label.form-check-label(for='haiku') Haiku
+          .form-check.form-check-inline
+              input.form-check-input(type='radio', name='type', id='limerick', value='limerick')
+              label.form-check-label(for='limerick') Limerick
+          .form-check.form-check-inline
+              input.form-check-input(type='radio', name='type', id='free', value='free')
+              label.form-check-label(for='free') Free form    
+        button.btn.btn-secondary.btn-lg(type='submit') Make
+
+        if errors 
+          .error-messages
+          hr
+          p Oops!
+            ul
+              for error in errors
+                li!= error.msg    
+  

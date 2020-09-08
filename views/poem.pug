@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    main.inner.cover(role='main')
+        h1.cover-heading.poem-heading Roses are red. <br> Violets are blue. <br> I like your style, here's a poem for you.
+        p.poem !{poem}
+        form(method='POST' action='')
+            .form-group
+                .form-check.form-check-inline
+                    input.form-check-input(type='radio', name='type', id='haiku', value='haiku', checked=(type==='haiku' ? true : false))
+                    label.form-check-label(for='haiku') Haiku
+                .form-check.form-check-inline
+                    input.form-check-input(type='radio', name='type', id='limerick', value='limerick', checked=(type==='limerick' ? true : false))
+                    label.form-check-label(for='limerick') Limerick
+                .form-check.form-check-inline
+                    input.form-check-input(type='radio', name='type', id='free', value='free', checked=(type==='free' ? true : false))
+                    label.form-check-label(for='free') Free form    
+            button.btn.btn-secondary.btn-lg(type='submit') Again
+        a.back-icon(href='/')
+            svg.bi.bi-arrow-bar-left(width='1em' height='1em' viewbox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd' d='M5.854 4.646a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L3.207 8l2.647-2.646a.5.5 0 0 0 0-.708z')
+                path(fill-rule='evenodd' d='M10 8a.5.5 0 0 0-.5-.5H3a.5.5 0 0 0 0 1h6.5A.5.5 0 0 0 10 8zm2.5 6a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 1 0v11a.5.5 0 0 1-.5.5z')

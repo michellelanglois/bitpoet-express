@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='Generate random poetry from websites. More fun than you can shake a stick at!')
+    meta(name='author', content='Michelle Langlois')
+    link(rel='icon', href='/favicon.ico')
+
+    title BitPoet
+
+    link(
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    )
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+  body
+    .container.d-flex.w-100.h-100.p-3.mx-auto.flex-column
+      div
+        block content
+      footer.mastfoot.mt-auto
+        .inner
+          p
+            | From the digital quill of 
+            a(href='https://github.com/michellelanglois') Michelle Langlois.
+            <br>
+            | Copyright 2020.
